@@ -1,0 +1,45 @@
+body {
+margin: 0;
+display: grid;
+place-items: center;
+background: #1a1a1a;
+}
+
+html, body{
+    height: 100%;
+}
+
+@keyframes spin{
+    100% {
+        rotate: 360deg;
+    }
+}
+
+svg{
+    width: 20vw;
+    height: 20vw;
+    animation: spin 1s linear infinite
+}
+
+@keyframes dash{
+    0% {
+        stroke-dasharray: 1, 150;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -35;
+    }
+    100% {
+        stroke-dasharray: 90, 150;
+        stroke-dashoffset: -124;
+    }
+}
+
+circle {
+    fill: none;
+    stroke: #d533e7;
+    stroke-width: 3px;
+    stroke-linecap: round;
+    animation: dash 2.5s ease-in-out infinite;
+}
